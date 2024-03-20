@@ -5,7 +5,7 @@
     "repository": "git@github.com:armandwipangestu/express-vercel.git",
     "author": "Arman <armandwi.pangestu7@gmail.com>",
     "scripts": {
-        "dev": "node index.js"
+        "dev": "node ./api/index.ts"
     },
     "license": "MIT",
     "dependencies": {
