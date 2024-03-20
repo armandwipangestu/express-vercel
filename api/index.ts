@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4545;
+const port = 5000;
 
 const datas = [
     {
@@ -13,14 +13,21 @@ const datas = [
     },
 ];
 
+const getData = () => {
+    return datas;
+};
+
 app.get("/", (req, res) => {
+    const data = getData();
     res.send({
         ok: true,
         status: 200,
-        data: datas,
+        data,
     });
 });
 
 app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+    console.log(`Server ready on localhost:${port}`);
 });
+
+module.exports = app;
