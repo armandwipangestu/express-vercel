@@ -13,8 +13,8 @@ const datas = [
     },
 ];
 
-app.get("/api/v1/users", async (req, res) => {
-    const data = await datas;
+app.get("/api/v1/users", (req, res) => {
+    const data = datas;
     res.send(data);
 });
 
